@@ -2,7 +2,7 @@ require("dotenv").config();
 const express = require('express');
 const cookieParser = require("cookie-parser");
 const cors = require("cors");
-const connectDB = require("./configtemp/database")
+const connectDB = require("./config/database")
 const paymentRouter = require("./routes/payment");
 const app = express();
 //middlewares
@@ -21,7 +21,7 @@ const authRouter = require("./routes/auth"); // or require("./routes/auth")
 const profileRouter = require("./routes/profile");
 const requestRouter = require("./routes/request");
 const userRouter = require("./routes/user");
-const mongoDb = require("./configtemp/database");
+const mongoDb = require("./config/database");
 
 //mount routers
 app.use("/",authRouter);
