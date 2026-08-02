@@ -3,11 +3,12 @@ const User = require("../models/user");
 
 const userAuth = async (req, res, next) => {
   try {
+     console.log("Cookies:", req.cookies);
     const { token } = req.cookies;
     if (!token) {
       return res.status(401).send("Please Login!");
     }
-
+    console.log("Token:", token);
     const decodedObj = await jwt.verify(token, process.env.JWT_SECRET);
     const { _id } = decodedObj;
 
