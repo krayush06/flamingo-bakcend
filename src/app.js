@@ -9,8 +9,9 @@ const app = express();
 app.use(cors({
     origin: [
         "http://localhost:8080",
-    "http://localhost:8081",
-    "https://flamingo-flutter-zeta.vercel.app"
+        "http://localhost:8081",
+        "https://flamingo-flutter-zeta.vercel.app",
+        "https://flamingo-flutter-e9r6e1vud-krayush06s-projects.vercel.app"
     ],
     credentials: true,
 }));
